@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You 💖</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #ffe6f0;
+        font-family: Arial, sans-serif;
+        flex-direction: column;
+    }
+
+    #btn {
+        padding: 15px 30px;
+        font-size: 20px;
+        background: pink;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #heart {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background: pink;
+        transform: rotate(-45deg);
+        margin-top: 30px;
+        display: none;
+    }
+
+    #heart:before,
+    #heart:after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: pink;
+        border-radius: 50%;
+    }
+
+    #heart:before {
+        top: -50px;
+        left: 0;
+    }
+
+    #heart:after {
+        left: 50px;
+        top: 0;
+    }
+
+    #shayari {
+        margin-top: 30px;
+        font-size: 20px;
+        color: #d63384;
+        text-align: center;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<button id="btn" onclick="showLove()">For You my Friend 💌</button>
+
+<div id="heart"></div>
+
+<div id="shayari">
+    💫 "दोस्ती में थोड़ा प्यार भी छुपा होता है,  
+हर मज़ाक के पीछे एक एहसास छुपा होता है,  
+तुम जैसा दोस्त मिल जाए ज़िंदगी में,  
+तो हर दिन खास सा लगता है..." 💙
+</div>
+
+<script>
+function showLove() {
+    document.getElementById("btn").style.display = "none";
+    document.getElementById("heart").style.display = "block";
+    document.getElementById("shayari").style.display = "block";
+}
+</script>
+
+</body>
+</html>
